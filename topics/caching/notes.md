@@ -257,13 +257,70 @@ def set_with_random_ttl(key, value, base_ttl):
 6. Implement fallback mechanisms
 7. Use cache warming for critical data
 
-## Interview Questions
+## Questions About Caching
 
 1. How would you design a caching system for a high-traffic website?
+
+   - Implement a multi-level caching strategy:
+     - Browser caching for static assets
+     - CDN for global content distribution
+     - Application-level caching (Redis/Memcached)
+     - Database query caching
+   - Use cache eviction policies (LRU, LFU)
+   - Implement cache warming for popular content
+   - Monitor cache hit rates and adjust strategies
+   - Consider cache sharding for horizontal scaling
+
 2. What caching strategy would you use for a read-heavy vs. write-heavy application?
+
+   - Read-heavy applications:
+     - Cache-aside pattern for frequently accessed data
+     - Longer TTL values
+     - Aggressive caching of query results
+     - Cache warming for popular content
+   - Write-heavy applications:
+     - Write-through or write-behind caching
+     - Shorter TTL values
+     - Selective caching of stable data
+     - Cache invalidation on writes
+     - Consider using a time-based invalidation strategy
+
 3. How do you handle cache invalidation in a distributed system?
+
+   - Implement cache invalidation patterns:
+     - Time-based expiration (TTL)
+     - Event-based invalidation
+     - Version-based invalidation
+   - Use a message queue for cache invalidation events
+   - Implement a distributed lock mechanism
+   - Consider using a cache consistency protocol
+   - Monitor and log invalidation events
+   - Handle race conditions and stale data
+
 4. What are the trade-offs between different caching strategies?
+
+   - Cache-aside:
+     - Pros: Simple, flexible, works with any data store
+     - Cons: Cache miss overhead, potential stale data
+   - Write-through:
+     - Pros: Always consistent, good for write-heavy
+     - Cons: Higher write latency, more complex
+   - Write-behind:
+     - Pros: Better write performance, reduced database load
+     - Cons: Potential data loss, more complex
+   - Refresh-ahead:
+     - Pros: Reduced cache misses, better user experience
+     - Cons: Wastes resources if data isn't accessed
+
 5. How would you prevent cache stampede?
+   - Implement a distributed lock mechanism
+   - Use a "hot key" detection system
+   - Implement request coalescing
+   - Use a circuit breaker pattern
+   - Implement backoff strategies
+   - Consider using a stale-while-revalidate pattern
+   - Monitor and alert on cache stampede conditions
+   - Use cache warming for predictable high-load scenarios
 
 ## Further Reading
 
