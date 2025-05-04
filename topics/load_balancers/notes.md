@@ -2,13 +2,21 @@
 
 ## Introduction
 
-Load balancers are the backbone of scalable and reliable web systems, seamlessly directing network traffic across multiple servers to prevent any single server from becoming overwhelmed. This ensures optimal performance and uninterrupted availability, even under heavy load. By distributing traffic efficiently, load balancers enable systems to scale by accommodating more servers, maintain availability by rerouting requests away from failed servers, and optimize performance through balanced server utilization.
+Load balancers are the backbone of scalable and reliable web systems, seamlessly directing network traffic across multiple servers to prevent any single server from becoming overwhelmed.
+
+This ensures optimal performance and uninterrupted availability, even under heavy load.
+
+By distributing traffic efficiently, load balancers enable systems to scale by accommodating more servers, maintain availability by rerouting requests away from failed servers, and optimize performance through balanced server utilization.
 
 This document explores the role of load balancers in modern distributed systems, diving into their types, methods for distributing traffic, practical implementation scenarios, and industry-standard tools that bring these concepts to life.
 
 ## What is a Load Balancer?
 
-A load balancer acts as an intermediary between clients, such as web browsers, and backend servers, intelligently routing incoming requests based on predefined rules. In essence, load balancers distribute incoming network traffic across multiple servers to ensure no single server becomes overwhelmed. They improve application availability, scalability, and reliability by distributing the workload efficiently.
+A load balancer acts as an intermediary between clients, such as web browsers, and backend servers, intelligently routing incoming requests based on predefined rules.
+
+In essence, load balancers distribute incoming network traffic across multiple servers to ensure no single server becomes overwhelmed.
+
+They improve application availability, scalability, and reliability by distributing the workload efficiently.
 
 The core responsibilities of a load balancer include:
 
@@ -32,7 +40,9 @@ Application Load Balancers operate at the application layer, making routing deci
 - SSL termination to offload encryption processing from backend servers
 - Support for WebSockets and HTTP/2 protocols
 
-**Real-world example**: AWS Application Load Balancer can route traffic to different target groups based on URL paths, allowing a single ALB to serve multiple applications. For instance, requests to `/api/*` might route to API servers while `/app/*` routes to application servers.
+**Real-world example**: AWS Application Load Balancer can route traffic to different target groups based on URL paths, allowing a single ALB to serve multiple applications.
+
+For instance, requests to `/api/*` might route to API servers while `/app/*` routes to application servers.
 
 ### 2. Network Load Balancer (Layer 4)
 
@@ -58,11 +68,15 @@ Classic Load Balancers represent an older generation of load balancing:
 
 ## Load Balancing Algorithms
 
-The core function of a load balancer is to decide which server handles each incoming request, a process governed by traffic distribution algorithms. This section examines widely used algorithms, each illustrated with code examples to clarify their mechanics.
+The core function of a load balancer is to decide which server handles each incoming request, a process governed by traffic distribution algorithms.
+
+This section examines widely used algorithms, each illustrated with code examples to clarify their mechanics.
 
 ### 1. Round Robin
 
-The round-robin algorithm distributes requests sequentially across servers in a circular order, making it simple yet effective for servers with similar capacities. However, it does not account for varying server loads, which can lead to inefficiencies in some scenarios.
+The round-robin algorithm distributes requests sequentially across servers in a circular order, making it simple yet effective for servers with similar capacities.
+
+However, it does not account for varying server loads, which can lead to inefficiencies in some scenarios.
 
 ```python
 # === Round-Robin Load Balancer ===
@@ -85,7 +99,9 @@ This approach is commonly used in NGINX as its default load balancing strategy f
 
 ### 2. Least Connections
 
-For environments where server loads vary, the least connections algorithm directs requests to the server with the fewest active connections. This dynamic approach ensures better resource utilization, particularly in systems with fluctuating workloads.
+For environments where server loads vary, the least connections algorithm directs requests to the server with the fewest active connections.
+
+This dynamic approach ensures better resource utilization, particularly in systems with fluctuating workloads.
 
 ```python
 # === Least Connections Load Balancer ===
@@ -128,7 +144,9 @@ This algorithm provides session persistence without cookies, making it useful fo
 
 ### 4. Weighted Round-Robin
 
-The weighted round-robin algorithm extends round-robin by assigning weights to servers based on their capacity, sending more requests to servers with higher weights. This is ideal for heterogeneous server environments where some servers have greater processing power.
+The weighted round-robin algorithm extends round-robin by assigning weights to servers based on their capacity, sending more requests to servers with higher weights.
+
+This is ideal for heterogeneous server environments where some servers have greater processing power.
 
 ```python
 # === Weighted Round-Robin Load Balancer ===
@@ -330,7 +348,9 @@ A versatile software solution, configurable with the upstream directive to suppo
 
 ### AWS Elastic Load Balancing
 
-Offers both Application Load Balancer (Layer 7) and Network Load Balancer (Layer 4), integrating seamlessly with auto-scaling for cloud-based systems. AWS ELB automatically removes failed EC2 instances from the traffic pool based on health checks.
+Offers both Application Load Balancer (Layer 7) and Network Load Balancer (Layer 4), integrating seamlessly with auto-scaling for cloud-based systems.
+
+AWS ELB automatically removes failed EC2 instances from the traffic pool based on health checks.
 
 ### HAProxy
 
@@ -342,9 +362,13 @@ Known for high performance, supports advanced algorithms like weighted round-rob
 
 **Answer**: There are three main types of load balancers:
 
-- **Application Load Balancers (Layer 7)** are best used when you need content-based routing and advanced HTTP features. They're ideal for microservices architectures, containerized applications, and when you need path-based routing. For example, in AWS, you would use an ALB when you need to route traffic to different target groups based on URL paths, host headers, or query parameters.
+- **Application Load Balancers (Layer 7)** are best used when you need content-based routing and advanced HTTP features. They're ideal for microservices architectures, containerized applications, and when you need path-based routing.
 
-- **Network Load Balancers (Layer 4)** are appropriate for situations requiring extreme performance, static IP addresses, and preservation of client IP addresses. They're ideal for TCP/UDP traffic that doesn't require application layer inspection. In AWS, an NLB would be the choice for applications like gaming servers, IoT platforms, or financial trading systems where milliseconds matter.
+For example, in AWS, you would use an ALB when you need to route traffic to different target groups based on URL paths, host headers, or query parameters.
+
+- **Network Load Balancers (Layer 4)** are appropriate for situations requiring extreme performance, static IP addresses, and preservation of client IP addresses. They're ideal for TCP/UDP traffic that doesn't require application layer inspection.
+
+In AWS, an NLB would be the choice for applications like gaming servers, IoT platforms, or financial trading systems where milliseconds matter.
 
 - **Classic Load Balancers** are legacy solutions, primarily used for existing applications running on EC2-Classic networks. They provide basic load balancing across multiple EC2 instances but lack many advanced features of modern load balancers.
 
@@ -406,9 +430,13 @@ In practice, I've found that least connections often works best for most web app
 
 ## Conclusion
 
-Load balancers are indispensable for building scalable systems, intelligently distributing traffic using algorithms like round-robin, least connections, IP hash, and weighted round-robin. They ensure reliability by handling server failures, maintain user sessions, and optimize global traffic routing.
+Load balancers are indispensable for building scalable systems, intelligently distributing traffic using algorithms like round-robin, least connections, IP hash, and weighted round-robin.
 
-As distributed systems continue to evolve, load balancers remain critical infrastructure components that enable reliability, scalability, and performance. Understanding their operation, configuration, and implementation provides essential knowledge for designing robust modern applications.
+They ensure reliability by handling server failures, maintain user sessions, and optimize global traffic routing.
+
+As distributed systems continue to evolve, load balancers remain critical infrastructure components that enable reliability, scalability, and performance.
+
+Understanding their operation, configuration, and implementation provides essential knowledge for designing robust modern applications.
 
 ## Further Reading
 
