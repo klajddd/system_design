@@ -40,7 +40,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Caching](./topics/caching/notes.md) - Caching strategies, types, and best practices
 - [Client-Server Model](./topics/client_server_model/notes.md) - Architecture, components, and communication patterns
 - [Configuration](./topics/configuration/notes.md) - System configuration management and best practices
-- [Hashing](./topics/hashing/notes.md) - Hash functions, consistent hashing, and applications
+- [Hashing](./topics/hashing/hashing_notes.md) - Hash functions, consistent hashing, and applications
 - [Key-Value Stores](./topics/key_value_stores/notes.md) - NoSQL databases, Redis, and use cases
 - [Latency and Throughput](./topics/latency_and_throughput/notes.md) - Performance metrics and optimization
 - [Leader Election](./topics/leader_election/notes.md) - Distributed consensus and leader election algorithms
