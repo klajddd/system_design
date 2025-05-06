@@ -45,7 +45,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Latency and Throughput](./topics/latency_and_throughput/notes.md) - Performance metrics and optimization
 - [Leader Election](./topics/leader_election/notes.md) - Distributed consensus and leader election algorithms
 - [Load Balancers](./topics/load_balancers/notes.md) - Load balancing strategies and implementations
-- [Logging and Monitoring](./topics/logging_and_monitoring/notes.md) - System observability and debugging
+- [Logging and Monitoring](./topics/logging_and_monitoring/logging_monitoring_notes.md) - System observability and debugging
 - [MapReduce](./topics/mapreduce/notes.md) - Distributed data processing and batch computing
 - [Network Protocols](./topics/network_protocols/notes.md) - Communication protocols, OSI model, and best practices
 - [Peer-to-Peer Networks](./topics/peer_to_peer_networks/notes.md) - P2P architecture and protocols
