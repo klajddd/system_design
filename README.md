@@ -36,7 +36,7 @@ This repository contains comprehensive notes and resources about system design t
 ## Topics Covered
 
 - [API Design](./topics/api_design/notes.md) - RESTful APIs, GraphQL, and API best practices
-- [Availability](./topics/availability/notes.md) - High availability, fault tolerance, and disaster recovery
+- [Availability](./topics/availability/availability_notes.md) - High availability, fault tolerance, and disaster recovery
 - [Caching](./topics/caching/notes.md) - Caching strategies, types, and best practices
 - [Client-Server Model](./topics/client_server_model/notes.md) - Architecture, components, and communication patterns
 - [Configuration](./topics/configuration/notes.md) - System configuration management and best practices
