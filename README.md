@@ -42,7 +42,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Configuration](./topics/configuration/notes.md) - System configuration management and best practices
 - [Hashing](./topics/hashing/hashing_notes.md) - Hash functions, consistent hashing, and applications
 - [Key-Value Stores](./topics/key_value_stores/notes.md) - NoSQL databases, Redis, and use cases
-- [Latency and Throughput](./topics/latency_and_throughput/notes.md) - Performance metrics and optimization
+- [Latency and Throughput](./topics/latency_and_throughput/latency_and_throughput_notes.md) - Performance metrics and optimization
 - [Leader Election](./topics/leader_election/notes.md) - Distributed consensus and leader election algorithms
 - [Load Balancers](./topics/load_balancers/notes.md) - Load balancing strategies and implementations
 - [Logging and Monitoring](./topics/logging_and_monitoring/logging_monitoring_notes.md) - System observability and debugging
