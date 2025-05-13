@@ -404,9 +404,9 @@ In AWS, I've configured ALB health checks to verify a `/health` endpoint that ch
 
 **Answer**: Ensuring load balancer high availability involves:
 
-- **Multi-AZ deployment**: Deploying load balancer nodes across multiple availability zones to survive datacenter failures. In AWS, this is handled automatically when you select multiple subnets in different AZs.
+- **Multi-AZ deployment**: Deploy load balancer nodes across multiple availability zones within a region to protect against datacenter-level failures. For example, in AWS, configuring an Application Load Balancer (ALB) or Network Load Balancer (NLB) to span multiple subnets in different Availability Zones ensures that traffic can still be routed even if one zone experiences an outage. AWS automatically manages the distribution and failover across these zones.
 
-- **Active-Active configuration**: Using multiple active load balancers with DNS round-robin or another global load balancing approach to distribute traffic across all available load balancers.
+- **Active-Active configuration**: Implement multiple active load balancers operating concurrently to distribute traffic. This can be achieved using DNS round-robin, where traffic is evenly distributed across all available load balancers, or by leveraging a global load balancing solution like AWS Global Accelerator. This approach minimizes the risk of a single point of failure and enhances redundancy.
 
 - **Failover mechanisms**: Implementing health checks and automated failover between load balancers. With AWS Route 53, you can set up health checks and failover routing policies.
 
