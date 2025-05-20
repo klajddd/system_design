@@ -52,7 +52,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Polling and Streaming](./topics/polling_and_streaming/notes.md) - Real-time data processing patterns
 - [Proxies](./topics/proxies/notes.md) - Forward and reverse proxies, use cases
 - [Publish-Subscribe](./topics/publish_subscribe/notes.md) - Message queues and event-driven architecture
-- [Rate Limiting](./topics/rate_limiting/notes.md) - API rate limiting and throttling
+- [Rate Limiting](./topics/rate_limiting/rate_limiting_notes.md) - API rate limiting and throttling
 - [Relational Databases](./topics/relational_databases/notes.md) - SQL databases, ACID properties, and optimization
 - [Replication and Sharding](./topics/replication_and_sharding/notes.md) - Data distribution and scaling
 - [Security and HTTPS](./topics/security_and_https/notes.md) - Web security, encryption, and best practices
