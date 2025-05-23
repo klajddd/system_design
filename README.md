@@ -50,7 +50,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Network Protocols](./topics/network_protocols/notes.md) - Communication protocols, OSI model, and best practices
 - [Peer-to-Peer Networks](./topics/peer_to_peer_networks/notes.md) - P2P architecture and protocols
 - [Polling and Streaming](./topics/polling_and_streaming/notes.md) - Real-time data processing patterns
-- [Proxies](./topics/proxies/notes.md) - Forward and reverse proxies, use cases
+- [Proxies](./topics/proxies/proxies_notes.md) - Forward and reverse proxies, use cases
 - [Publish-Subscribe](./topics/publish_subscribe/notes.md) - Message queues and event-driven architecture
 - [Rate Limiting](./topics/rate_limiting/rate_limiting_notes.md) - API rate limiting and throttling
 - [Relational Databases](./topics/relational_databases/notes.md) - SQL databases, ACID properties, and optimization
