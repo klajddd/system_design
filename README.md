@@ -54,7 +54,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Publish-Subscribe](./topics/publish_subscribe/publish_subscribe_pattern_notes.md) - Message queues and event-driven architecture
 - [Rate Limiting](./topics/rate_limiting/rate_limiting_notes.md) - API rate limiting and throttling
 - [Relational Databases](./topics/relational_databases/relational_databases_notes.md) - SQL databases, ACID properties, and optimization
-- [Replication and Sharding](./topics/replication_and_sharding/notes.md) - Data distribution and scaling
+- [Replication and Sharding](./topics/replication_and_sharding/replication_and_sharding_notes.md) - Data distribution and scaling
 - [Security and HTTPS](./topics/security_and_https/notes.md) - Web security, encryption, and best practices
 - [Specialized Storage](./topics/specialized_storage/notes.md) - Time-series, graph, and other specialized databases
 - [Storage](./topics/storage/notes.md) - Storage systems, types, and distributed storage solutions
