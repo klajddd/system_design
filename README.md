@@ -56,7 +56,7 @@ This repository contains comprehensive notes and resources about system design t
 - [Relational Databases](./topics/relational_databases/relational_databases_notes.md) - SQL databases, ACID properties, and optimization
 - [Replication and Sharding](./topics/replication_and_sharding/replication_and_sharding_notes.md) - Data distribution and scaling
 - [Security and HTTPS](./topics/security_and_https/notes.md) - Web security, encryption, and best practices
-- [Specialized Storage](./topics/specialized_storage/notes.md) - Time-series, graph, and other specialized databases
+- [Specialized Storage](./topics/specialized_storage/storage_notes.md) - Time-series, graph, and other specialized databases
 - [Storage](./topics/storage/notes.md) - Storage systems, types, and distributed storage solutions
 
 ## How to Use This Repository
